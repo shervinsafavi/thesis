@@ -1,0 +1,57 @@
+% Table of Contents - List of Tables/Figures/Listings and Acronyms
+
+\addtocontents{toc}{\protect\vspace{\beforebibskip}} % Place the bibliography slightly below the rest of the document content in the table of contents
+\pdfbookmark[0]{\listfigurename}{lof} % Bookmark name visible in a PDF viewer
+
+\listoffigures
+
+\vspace*{8ex}
+\newpage
+
+% ----------------------------------------------------------------------------------------
+%	Acronyms
+% ----------------------------------------------------------------------------------------
+
+\refstepcounter{dummy}
+
+\markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+
+\addcontentsline{toc}{chapter}{\tocEntry{Acronyms}}
+
+
+
+\chapter*{Acronyms}
+
+
+\begin{acronym}[UML]
+  \acro{BOLD}{Blood-Oxygen-Level Dependent}
+  \acro{BFS}{Binocular Flash Suppression }
+  \acro{CAS}{Complex Adaptive System}
+  \acro{CCA}{Canonical Correspondence Analysis}
+  \acro{fMRI}{functional Magnetic Resonance Imaging}
+  \acro{LFP}{Local Field Potential}
+  \acro{LGN}{Lateral Geniculate Nucleues}
+  \acro{LIF}{Leaky-Integrate and Fire}
+  \acro{LPFC}{Lateral Prefrontal Cortex}
+  \acro{vlPFC}{ventro lateral Prefrontal Cortex}
+  \acro{PFC}{Prefrontal Cortex}
+  \acro{PLV}{Phase Locking Value}
+  \acro{MUA}{Multi Unit Activity}
+  \acro{NET-fMRI}{Neural-Event-Triggered functional Magnetic Resonance Imaging}
+  \acro{NMF}{Non-negative Matrix Factorization}
+  \acro{OKN}{Optokinetic Nystagmus}
+  \acro{REM}{Rapid-Eye-Movement}
+  \acro{RG}{Renormalization Group}
+  \acro{STFT}{Short-Term Fourier Transform }
+  \acro{SUA}{Single Unit Activity}
+  \acro{SFC}{Spike Field Coherence}
+  \acro{SNR}{Signal to Noise Ratio}
+  \acro{SVD}{Singular Value Decomposition}
+
+\end{acronym}  
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:

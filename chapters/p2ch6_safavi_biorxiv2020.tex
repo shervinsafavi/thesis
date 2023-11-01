@@ -1,0 +1,63 @@
+\chapter{Paper \rom{2}}\label{cha:paper-gpla}
+\section*{Paper information} % 
+\input{chapters/paperInfo_safavi2020uon.tex}
+
+\section*{Summary} %
+\subsection*{Motivation}
+
+The synchronization between spiking activity and the phase of particular rhythms of LFP has been suggested as an important marker to reason about the underlying cooperative network mechanisms; 
+nevertheless, there is not yet a systematic way to extract concise coupling information from the largely multi-variate data available in current recording techniques.
+We introduce Generalized Phase Locking Analysis (GPLA) which is a multi-variate extension of phase-locking analysis.
+Phase-locking analysis is a common uni-variate method of quantifying the spike-LFP relationship.
+With GPLA, we can quantify, characterize and statistically assess the interactions between pop\-ulation-level spiking activity and mesoscopic network dynamics
+(such as global oscillations and traveling waves).
+
+
+\subsection*{Material and Methods}
+
+We collect the coupling information between spikes and LFP in a coupling matrix.
+The coupling matrix, constructed by all the pairwise complex-value spike-field coupling coefficients, 
+represents the population-level spiking activity and all LFP channels.
+We use Singular Value Decomposition (SVD) to provide a low-rank representation of the coupling matrix.
+Therefore, we summarize the information of the coupling matrix with the largest singular value and the corresponding singular vectors. 
+Singular vectors represent the dominant LFP and spiking patterns and the singular value, called generalized Phase Locking Value (gPLV), characterizes the strength of the coupling between LFP and spike patterns.
+
+We further investigate the statistical properties of the gPLV and develop an empirical and theoretical statistical testing framework for assessing the significance of the coupling measure gPLV.
+For the empirical test, we synthesize surrogate data with spike jittering for the generation of the null hypothesis and use it to estimate the p-value for the gPLV calculated from the data.
+For the theoretical test, we used Martingale theory and \cite{aalenSurvivalEventHistory2008}
+Random Matrix Theory (RMT) \citep{andersonIntroductionRandomMatrices2010}
+to approximate the distribution of singular values under the null hypothesis (see \citet{safaviUnivariateMultivariateCoupling2020} for the details and \autoref{cha:paper-5} for a summary).
+This allows us to derive a computationally efficient significance test in comparison to the empirical one.
+
+\subsection*{Results}
+Firstly, if both GPLA and its uni-variate counterpart are applicable,
+GPLA is superior as it can extract a more reliable  coupling structure in the presence
+of an excessive amount of noise in LFP.
+Furthermore, to demonstrate the capability of GPLA for mechanistic
+interpretation of the neural data,
+we apply GPLA to various simulated and experimental data.
+Application of GPLA on simulation of hippocampal
+Sharp-Wave-Ripples (SWR) can reveal various characteristics of hippocampal circuitry with minimal prior knowledge.
+For instance, with GPLA we can show CA1 and CA3 neurons are all coupled to the field activity in the gamma and ripple band
+(in line with experimental and simulation results 
+\citep{buzsakiHighfrequencyNetworkOscillation1992,ramirez-villegasDissectingSynapseFrequencyDependent2018}),
+suggesting this rhythm may support communication between CA1 and CA3 sub-fields during memory trace replay. 
+Furthermore, it also allows us to tease apart the involved populations based on the label-free spike timing and LFP.
+GPLA can also provide hints on the propagation of activity between the populations (propagation from CA3 to CA1).
+Application of the method on the experimental recordings from monkey PFC suggests a \emph{global} coupling between spiking activity and LFP traveling waves in this region of PFC.
+Overall, exploiting the phase distributions across space and frequencies captured by GPLA combined with neural field modeling help to untangle the contribution of inhibitory and excitatory recurrent interactions to the observed spatio-temporal dynamics.
+
+\subsection*{Conclusion}
+GPLA is a multi-variate method to quantify, characterize and statistically assess the interactions between population-level spiking activity and mesoscopic network dynamics such as global oscillations, traveling waves, and transient neural events.
+Spike and LFP vectors compactly represent the dominant LFP and spiking patterns and  generalized Phase Locking Value (gPLV),
+characterizes the strength of the coupling between LFP and spike patterns.
+Our theoretical statistical testing framework allows a computationally efficient assessment of the significance of coupling measure gPLV.
+This is of paramount importance for neural data analysis given the ever-increasing dimensionality of modern recording techniques that need computationally efficient statistical tests.
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:
+
+

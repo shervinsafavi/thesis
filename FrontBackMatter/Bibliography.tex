@@ -1,0 +1,25 @@
+% Bibliography
+
+\label{app:bibliography} % Reference the bibliography elsewhere with \autoref{app:bibliography}
+
+\manualmark
+\markboth{\spacedlowsmallcaps{\bibname}}{\spacedlowsmallcaps{\bibname}} % work-around to have small caps also
+\refstepcounter{dummy}
+\addtocontents{toc}{\protect\vspace{\beforebibskip}} % to have the bib a bit from the rest in the toc
+\addcontentsline{toc}{chapter}{\tocEntry{\bibname}}
+
+% \bibliographystyle{APA}
+
+% \IfFileExists{/home/ssafavi/Nextcloud/libraries/zotlib.bib}{\bibliography{/home/ssafavi/Nextcloud/libraries/zotlib,locallib,tmplib}}{\bibliography{locallib,tmplib}}
+
+% % bib source setting (this might need to go to a seperate bib file)
+% \IfFileExists{/home/ssafavi/Nextcloud/libraries/zotlib.bib}{\bibliography{/home/ssafavi/Nextcloud/libraries/zotlib.bib,locallib,tmplib.bib}}{\bibliography{locallib.bib,tmplib.bib}}%,tmplib.bib}}
+
+
+\printbibliography
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% TeX-master: "../phdThesis_csb"
+%%% End:

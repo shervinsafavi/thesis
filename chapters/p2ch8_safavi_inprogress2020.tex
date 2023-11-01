@@ -1,0 +1,75 @@
+\chapter{Paper \rom{4}}\label{cha:paper-safavi2020cribay}
+\section*{Paper information} % 
+
+\input{chapters/paperInfo_safavi2020cribay.tex}
+
+\section*{Summary} %
+\subsection*{Motivation}
+
+Understanding the computations that the brain needs to implement (neural computation)
+and the dynamics of the brain activity (neural dynamics) are two important goals of computational neuroscience \cite[Chapter 1]{churchlandComputationalBrain1992}.
+Ideally, we need a framework that can accommodate both aspects of the brain in one framework
+\cite{churchlandComputationalBrain1992,eurichNeuralDynamicsNeural2003}.
+Nevertheless, to the best of my knowledge, no framework has been developed to satisfy this important need.
+
+An intermediate step toward developing such a framework is exploiting the frameworks and models that are either centered around neural computation or neural dynamics \emph{with implications for the other aspect}.
+Indeed, there are normative models that have implications for neural dynamics
+\cite{lengyelMatchingStorageRecall2005,deneveBayesianSpikingNeurons2008a,deneveBayesianSpikingNeurons2008,tanakaRecurrentInfomaxGenerates2008,buesingNeuralDynamicsSampling2011,boerlinPredictiveCodingDynamical2013,billDistributedBayesianComputation2015,chalkNeuralOscillationsSignature2016,zeldenrustEfficientRobustCoding2019,echevesteCorticallikeDynamicsRecurrent2020}
+and also models of neural dynamics with implications for neural computation
+\cite{bertschingerRealtimeComputationEdge2004,eliasmithUnifiedApproachBuilding2005,sussilloNeuralCircuitsComputational2014,hidalgoInformationbasedFitnessEmergence2014a,shrikiOptimalInformationRepresentation2016,maassSearchingPrinciplesBrain2016,kimLearningRecurrentDynamics2018,chenComputingModulatingSpontaneous2019,michielsvankessenichPatternRecognitionNeuronal2019,finlinsonOptimalControlExcitable2020}
+We suggest seeking for ``bridges'' between such frameworks can be a first step.
+%
+Neural coding is of particular interest for building such bridges
+as there have been various studies that suggest potential connections between neural coding and neural dynamics 
+\cite{ermentroutRelatingNeuralDynamics2007c,boerlinPredictiveCodingDynamical2013,shrikiOptimalInformationRepresentation2016,chalkNeuralOscillationsSignature2016,alamiaAlphaOscillationsTraveling2019,kadmonPredictiveCodingBalanced2020,roethEfficientPopulationCoding2020,echevesteCorticallikeDynamicsRecurrent2020}.
+In particular, multiple recent studies provide qualitative or quantitative evidence on the usefulness of operating close to a phase transition for coding
+\cite{shrikiOptimalInformationRepresentation2016,chalkNeuralOscillationsSignature2016,kadmonPredictiveCodingBalanced2020,roethEfficientPopulationCoding2020}.
+Interestingly, the phase transition is also one of the pillars of the criticality hypothesis of the brain
+\cite{munozColloquiumCriticalityDynamical2018,tkacikInformationProcessingLiving2016,moraAreBiologicalSystems2011a}.
+In spite of this apparent and exciting connection,
+networks implementing neural coding have never been investigated for signatures of criticality.
+In this study, we investigate networks that can be optimized for neural coding for signatures of criticality.
+
+\subsection*{Material and Methods}
+
+In this study, we investigate a network of Leaky-Integrate and Fire (LIF) neurons whose connectivity and dynamics can be optimized for coding a one-dimensional sensory input \cite{chalkNeuralOscillationsSignature2016}.
+This network can be optimized to encode the input efficiently
+(\ie with a minimal number of spikes) and accurately (\ie with minimal reconstruction error).
+The input is reconstructed by performing a linear readout of spike trains
+(see \cite{boerlinPredictiveCodingDynamical2013}).
+Given an idealized network with instantaneous synapses, the optimal network could be derived analytically from first principles \cite{boerlinPredictiveCodingDynamical2013}.
+In this case, neurons that receive a common input avoid communicating redundant information via instantaneous recurrent inhibition.
+However, adding realistic synaptic delays leads to network synchronization, which impairs coding efficiency.
+\citet{chalkNeuralOscillationsSignature2016} demonstrated that, in the presence of synaptic delays, a network of LIF neurons can nonetheless be optimized for efficient coding by adding noise to the network.
+The network's performance depends non-monotonically on the noise amplitude,
+with the optimal performance achieved for an intermediate noise level. 
+% 
+We investigate potential signatures of criticality such as the scale-freeness of neuronal avalanches \cite{beggsNeuronalAvalanchesNeocortical2003} in the spiking activity of the network.
+
+
+\subsection*{Results}
+
+In this study, we introduce a new approach to better connect neural dynamics and neural computation.
+Here we search for a potential connection between models of neural dynamics with implications on neural computation,
+and normative models of neural computation with implications for neural dynamics.
+We search for signatures of criticality in neuronal networks that can be optimized based on objectives of efficient coding. 
+We investigate
+efficient coding networks for signatures of criticality.
+Interestingly, almost exclusively in the optimized network, we observe the signatures of criticality
+and when the noise amplitude is too low or too high for efficient coding, the network appears either super-critical or sub-critical, respectively.
+In both cases, the noise level that was optimal for coding also resulted in a scale-free avalanche behavior.
+
+\subsection*{Conclusion}
+
+Our results suggest that coding-based optimality might co-occur with closeness to criticality.
+This result has important implications, as it shows how two influential,
+and previously disparate fields --- efficient coding, and criticality --- might be intimately related.
+This work proposes several promising avenues for future research on the computation and dynamics of the neural system.
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:
+
+

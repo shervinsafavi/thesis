@@ -1,0 +1,226 @@
+\chapter{Approaching through neural theories}\label{cha:appr-thro-theo}
+
+As motivated in \autoref{cha:brain-as-complex},
+in order to achieve the target bridge between complex systems and neuroscience, \ie
+approaching the brain as a complex system by exploiting systems neuroscience tools and notions,
+one of the apertures through which, we can seek for the complementary approaches is neural theories (see  \autoref{sec:toward-neur-insp}).
+In this chapter we aim to explore two important theoretical frameworks,
+one closely related to the field of neuroscience, and one to complex systems.
+In order to establish the mentioned bridge, we explore the potential connection between them.
+On the neuroscience side, we consider \emph{efficient coding} which is one of the most important theoretical frameworks in systems neuroscience,
+and on the complex systems side, we reflect on the \emph{criticality hypothesis of the brain} that has strong roots in the field of complex systems.
+We first provide a brief overview on each of them, and then their potential connection.
+
+
+\section{Criticality hypothesis of the brain}\label{sec:crit-hypoth-brain}
+In the course of studying the state of the matter
+(\eg water, steam and ice as states of \ch{H2O})
+and their phase transitions (\eg transition from water to vapor)
+physicists discover some \emph{universal} behavior in a variety of phase transitions
+(\eg freezing of water and  magnetization in metals \cite[Chapter 5]{schroederIntroductionThermalPhysics1999}
+as well as in wider ranges of natural phenomenon such as human social behavior \cite{castellanoNonequilibriumPhaseTransition2000} 
+(see \citet{mathisEmergenceLifeFirstOrder2017} and \citet{bar-yamWhyComplexityDifferent2017} for other examples).
+Later on, in the process of examining the relationship between microscopic variables like speed of atoms and macroscopic variables like temperature,
+it has been realized that, close to a critical point the usual methods fail to establish these relationships.
+The critical point (for water) is the point where fluctuations between liquid-like and
+vapor-like densities extend across the system so that the system is not smooth anymore and therefore averages are not well behaved.
+Furthermore, this characteristic inharmonious behavior was observable at all scales \cite{bar-yamWhyComplexityDifferent2017}.
+Indeed, the method of Renormalization Group (RG) has been developed to investigate mathematically such state of a system and has been applied on a wide range of systems.
+It turns out, in spite of differences in details of various systems (\eg magnetic dipoles and molecules of water),
+their behavior can be explained based on the RG method.
+This important observation, led to the notion of \emph{universality},
+that allow us to explain various systems with many interacting components with a small set of variables and some scaling relations.
+
+Based on these fundamental ideas \emph{criticality hypothesis of the brain} has been proposed \cite{munozColloquiumCriticalityDynamical2018}.
+Roughly speaking, criticality hypothesis of the brain states that,
+brain operates close to a critical state, a state on the edge of transition between order and disorder.
+The first experimental evidence on scale-freeness of the brain dynamics
+(as one of the signatures of criticality -- see \autoref{sec:sign-crit-neur})
+has been reported almost two decades ago by \citet{beggsNeuronalAvalanchesNeocortical2003}.
+Later on such scale-free dynamics have been observed in various smaller and larger scales as well.
+To name a few, see
+\citet{bonilla-quintanaActinDendriticSpines2020} at the scale of actin in dendrites,
+\citet{johnsonSinglecellMembranePotential2019} at the scale of neuronal membranes,
+\citet{varleyDifferentialEffectsPropofol2020} at the scale of the entire brain
+(for more references see \cite{munozColloquiumCriticalityDynamical2018,agrawalScaleChangeSymmetryRules2019}).
+Moreover, being close to this state is beneficial for the brain
+\cite{munozColloquiumCriticalityDynamical2018,tkacikInformationProcessingLiving2016,moraAreBiologicalSystems2011a},
+as it has been shown that general information processing capabilities such as
+sensitivity to input \cite{kinouchiOptimalDynamicalRange2006,brochiniPhaseTransitionsSelforganized2016}, 
+dynamic range
+\cite{kinouchiOptimalDynamicalRange2006,larremorePredictingCriticalityDynamic2011,nurProbingSpatialInhomogeneity2019},
+or information transmission and storage
+\cite{shewInformationCapacityTransmission2011,vanniCriticalityTransmissionInformation2011,lukovicTransmissionInformationCriticality2014,marinazzoInformationTransferCriticality2014},
+and various other computational characteristics has been also considered to be relevant
+\cite{turingComputingMachineryIntelligence1950,tanakaRecurrentInfomaxGenerates2008,hidalgoInformationbasedFitnessEmergence2014a,hidalgoCooperationCompetitionEmergence2016,medianoIntegratedInformationMetastability2016,khajehabdollahiEmergenceIntegratedInformation2019,hoffmannOptimizationSelfOrganizedCriticality2018a,michielsvankessenichPatternRecognitionNeuronal2019,wangHierarchicalConnectomeModes2019,finlinsonOptimalControlExcitable2020,zeraatiAttentionalModulationIntrinsic2021}
+(also see  
+\cite{beggsCriticalityHypothesisHow2008,shewFunctionalBenefitsCriticality2013,zeraatiSelfOrganizationCriticalitySynaptic2021}
+for a reviews).
+
+To summarize, multiple studies have reported signatures of criticality observed in various neuronal recordings at different scales,
+and  theoretical investigations demonstrated various aspects of information processing are optimized at the second-order phase transition
+(see references in \cite{munozColloquiumCriticalityDynamical2018,agrawalScaleChangeSymmetryRules2019}).
+
+\section{Signatures of criticality in neural systems}\label{sec:sign-crit-neur}
+As motivated in the previous section,
+various empirical and theoretical investigations lend support to criticality hypothesis of the brain,
+and signify the potential functional relevance of the criticality hypothesis of the brain.
+Therefore, it has been motivating to search for diverse signatures of criticality in the brain.
+These signatures can be categorized into three groups \cite{zeraatiStudyingCriticalityIts2017}:
+scale-freeness neural activity (avalanche criticality),
+dynamical regime of the neural system (edge of bifurcation criticality),
+and thermodynamic of the neural data (maximum entropy criticality).
+\begin{description}
+
+\item[Avalanche criticality:]
+  Scale-free cascade of activity is a ubiquitous type of dynamics in nature:
+  For instance in interacting tectonic plates \cite{gutenbergEarthquakeMagnitudeIntensity1956},
+  forest fires \cite{malamudForestFiresExample1998},
+  nuclear chain reactions \cite{harrisTheoryBranchingProcesses1963},
+  threshold-crossing events that appears as one unit (\eg a tree) exceeding a threshold (\eg a tree fires)
+  and because the units of the system are coupled to each other,
+  similar threshold-crossing events \emph{propagate} through other units of the system.
+  Such propagating dynamics can lead to large \emph{avalanches} of activity.
+  Almost two decades ago \citet{beggsNeuronalAvalanchesNeocortical2003} observed similar cascades in activity of in-vitro neural populations
+  and later on others reported such scale-free cascades at various other neuronal recordings in various scales (see references in
+  \cite{munozColloquiumCriticalityDynamical2018,agrawalScaleChangeSymmetryRules2019}).
+  Truly critical systems, not only should show the mentioned scale free dynamics,
+  but also they should follow the scaling laws introduced by \citet{sethnaCracklingNoise2001b},
+  that were observed in neural data \cite{friedmanUniversalCriticalDynamics2012} as well
+  \footnote{
+    Indeed, scale-free neural avalanches without following scaling laws have been observed in neural models that are not operating close to a critical point 
+  \cite{aitchisonZipfLawArises2016a,touboulPowerlawStatisticsUniversal2017}.}.
+
+\item[Bifurcation criticality:]
+  When a dynamical system has a transition from one dynamical regime to another
+  (such as transition from order to chaos),
+  it experiences a \emph{bifurcation} \cite{izhikevichDynamicalSystemsNeuroscience2010,breakspearDynamicModelsLargescale2017,cocchiCriticalityBrainSynthesis2017}.
+  The point where the transition happens is also denoted as the critical point.
+  There are various kinds of bifurcations (see \citet{izhikevichDynamicalSystemsNeuroscience2010}),
+  but some of them have been particularly appealing for understating the dynamics of the brain as well as computation in the brain.
+  Without getting into the theoretical details of these bifurcations and in very brief fashion,
+  transitioning from order to chaos \cite{bertschingerRealtimeComputationEdge2004},
+  and transitioning from an asynchronous to a synchronous state \cite{santoLandauGinzburgTheory2018}
+  have been considered as two important bifurcations for the brain
+  (for further elaboration see \citet{cocchiCriticalityBrainSynthesis2017,munozColloquiumCriticalityDynamical2018} and references therein).
+  Avalanche criticality and bifurcation criticality can co-occur,
+  when there is a continuous phase transition \cite{cocchiCriticalityBrainSynthesis2017}
+  (for example see \cite{magnascoSelftunedCriticalAntiHebbian2009,pittorinoChaosCorrelatedAvalanches2017}),
+  nevertheless, \citet{kandersAvalancheEdgeofchaosCriticality2017} 
+  proposed that these two types of criticality do not necessarily co-occur and therefore should be attributed to two distinct phenomena.
+
+\item[Thermodynamic criticality:]
+  Statistical mechanic provides a powerful framework to study collective behavior in systems consisting of interacting units with many degrees of freedom \cite{sethnaStatisticalMechanicsEntropy2006}.
+  Tools from statistical mechanic have been applied in neural networks in order to understand their collective dynamics \cite{amitModelingBrainFunction1992}.
+  Along the same line \citet{tkacikThermodynamicsSignaturesCriticality2015} approached the activity of neurons from a thermodynamical perspective.
+  They define a Boltzman-like distribution, derive various thermodynamic quantities such as heat capacity based on estimated Boltzman distribution, and ultimately define criticality based on thermodynamic quantities (like divergence of heat capacity).
+  Moreover, in empirical data this novel framework is applicable and functionally relevant.
+  This novel formulation introduces another signature or definition of criticality in neural system \cite{tkacikThermodynamicsSignaturesCriticality2015}
+  (but also see \cite{nonnenmacherSignaturesCriticalityArise2017}).
+\end{description}
+
+\section{Seeking for a bridge: a complementary approach}\label{sec:seek-bridg-compl}
+
+As mentioned earlier, over the last two decades, multiple
+experimental and theoretical investigations lend support to criticality hypothesis of the brain. 
+In particular, as it was briefly discussed in \autoref{sec:crit-hypoth-brain},
+closeness to criticality has been suggested to be an optimal state for information processing.
+To evaluate how closeness to criticality can be beneficial for the information processing in the brain,
+the common approach is using a model
+(\eg a branching network, a recurrent neural network)
+that can attain various states (including critical and non-critical states),
+ depending on control parameters (\eg branching ratio, connection strength) of the model.
+Then by quantifying how general information processing capabilities such as
+information transmission
+depend on the control parameters, the advantages of being close to a critical state can be assessed.
+For instance, if information transmission in the model under study is optimized exclusively close to the critical state of the model (defined based on the control parameter(s)),
+then it can be considered as evidence for relevance of usefulness of criticality for the brain.
+
+Indeed, one of the important reasons for the relevance of the criticality for the brain
+is the optimized  information processing capabilities that operating close to this state offers.
+Nevertheless, the \emph{optimized setting} implied by criticality hypothesis,
+does not imply any specific computation that the brain may need to execute,
+but rather \emph{general} capabilities for computation
+\footnote{
+  See also \citet{lizierLocalInformationDynamics2013} (in particular chapter 6) that argue
+  closeness to criticality is a sate where [some] computing primitives (such as information storage, transfer and modification) are optimized.
+  Furthermore, an complementary perspective is, non-critical states can be specifically advantageous for a particular computation,
+  and therefore brain needs to be able to flexibly switch between them \cite{clawsonAdaptationScalefreeDynamics2017,zeraatiStudyingCriticalityIts2017}.
+}.
+For instance,
+being in a state which is optimized to have the maximum sensitivity to input \cite{kinouchiOptimalDynamicalRange2006,brochiniPhaseTransitionsSelforganized2016}, 
+and maximum dynamic range
+\cite{kinouchiOptimalDynamicalRange2006,larremorePredictingCriticalityDynamic2011,nurProbingSpatialInhomogeneity2019}
+are all relevant capabilities for coding sensory information,
+but mere adjusting for the closeness to criticality cannot provide a neural coding algorithm and its implementation for coding given resource constraints.
+In contrast, there are frameworks (such as efficient coding)
+that  provide the functionally relevant objectives to be maximized or minimized
+(which define the optimized computation),
+the algorithm of computation (neural coding algorithm) and the neural implementation.
+Therefore, we think we need complementary approaches to criticality
+that can bridge the gap between criticality and frameworks which focus on \emph{functionally relevant} computations and their implementations.
+
+\subsection{Efficient coding as the computational objective}\label{sec:efficient-coding-as}
+
+We focus on \emph{coding}, as a functionally relevant computation
+(and with the ultimate purpose of establishing the bridge to criticality). 
+Efficiency of neural coding is particularly important, as sensory systems have evolved to transmit maximal information about incoming sensory signals,
+given internal resource constraints (such as internal noise, and/or metabolic cost)
+\cite[Chapeter 13]{rosenblithSensoryCommunication2012}\cite{fredriekeSpikesExploringNeural1999,quianquirogaPrinciplesNeuralCoding2013}.
+Indeed, models using this simple principle made various verified predictions about neural responses
+(\eg receptive field in in V1
+\cite{olshausenEmergenceSimplecellReceptive1996,simoncelliNaturalImageStatistics2001}).
+
+
+Several variants of efficient coding have been develop\-ed
+(for a brief over\-view see \cite{chalkUnifiedTheoryEfficient2018}).
+Depending on the answers to qualitative questions like,
+``
+\emph{What should be encoded?}
+\emph{What sensory information is relevant?}
+\emph{What can be encoded given the internal constraints?}
+``,
+the suitable variant of efficient coding can be determined
+(see \citet{chalkUnifiedTheoryEfficient2018} for a quantitative elaboration).
+For instance, one of the variants of efficient coding is based on \emph{redundancy reduction},
+which has the  objective of encoding maximal information about \emph{all} inputs with statistically independent responses and it is applicable in low noise regime \cite{chalkUnifiedTheoryEfficient2018}.
+% 
+% 
+Afterward, based on principles of efficient coding, a computational objective for a given neural system can be defined.
+Our choice of efficient coding computational objective is the one introduced in \citet{boerlinPredictiveCodingDynamical2013}.
+The objective of this coding schema is,
+a network of Leaky-Integrate and Fire (LIF) neurons should encode the input through a pattern of spikes,
+such that input stimulus can be reconstructed based on a linear readout of the spiking output.
+Furthermore, the network should perform the coding with minimum number of spikes and as accurate as possible.
+The same principle has been employed in \citet{chalkNeuralOscillationsSignature2016} in a more realistic network of LIF neurons and has been used in our investigation.
+
+
+\subsection{Signature of criticality in efficient coding networks}
+
+Following our motivation for the necessity of complementary approaches to criticality,
+we study networks that implement efficient coding
+(see \citet{boerlinPredictiveCodingDynamical2013} and \citet{chalkNeuralOscillationsSignature2016} for more details)
+and we ask if any of the  criticality signatures
+(discussed in \autoref{sec:sign-crit-neur})
+are observable exclusively in the network that is optimized for performing  efficient coding.
+
+We investigate the scale-freeness of neuronal avalanches \cite{beggsNeuronalAvalanchesNeocortical2003},
+as a potential signature of the networks operating close to criticality.
+A neuronal avalanche is defined as an uninterrupted cascade of spikes propagating through the network \cite{beggsNeuronalAvalanchesNeocortical2003}.
+In a system operating close to criticality, the distribution of avalanche sizes (number of spikes in a cascade) follows a power law.
+An event is an occurrence of at least 1 spike (among all neurons) within a small window of time.
+
+Interestingly our analysis suggests that,
+in the vicinity of the parameters that are optimized for efficient coding in the network %show scale-freeness in spiking activity
+the distribution of avalanche sizes follow a power-law. 
+When the noise amplitude is considerably lower or higher for efficient coding,
+the network appears either super-critical or sub-critical, respectively
+(see \nameref{cha:paper-safavi2020cribay} for more details). 
+Certainly, this is only a preliminary step, but indeed, 
+it might bring us a few  steps closer to bridging criticality and computational frameworks that complement the criticality.
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:

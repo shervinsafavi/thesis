@@ -1,0 +1,105 @@
+\chapter{Paper \rom{7}}\label{cha:paper-kapoor2020}
+\section*{Paper information} % 
+
+\input{chapters/paperInfo_kapoor2020dcc.tex}
+
+\section*{Summary} %
+\subsection*{Motivation}
+The role of prefrontal cortex (PFC) has been controversial in recent consciousness studies.
+Different frameworks of consciousness attribute different, even contradictory roles for PFC in generation of conscious experience.
+Several frameworks, namely,
+frontal lobe hypothesis \cite{crickConsciousnessNeuroscience1998},
+higher order theory \cite{lauEmpiricalSupportHigherorder2011} and
+global neuronal workspace framework \cite{baarsGlobalWorkspaceTheory2005,dehaeneExperimentalTheoreticalApproaches2011}
+consider PFC play a mechanistic role in generation of conscious experience.
+On the opposite side, another important framework of studying consciousness,
+integrated theory of consciousness \cite{tononiInformationIntegrationTheory2004,balduzziIntegratedInformationDiscrete2008b,balduzziQualiaGeometryIntegrated2009b,oizumiPhenomenologyMechanismsConsciousness2014}
+(for a review see \citet{tononiIntegratedInformationTheory2016}),
+does not consider a similar role for PFC in generation of conscious experience,
+rather attribute the role of PFC to prerequisites and consequences of  consciousness
+\cite{aruDistillingNeuralCorrelates2012,degraafCorrelatesNeuralCorrelates2012}.
+
+There are various differences between the aforementioned studies that support each of the two hypothesis.
+For instance, studies that support attributing the role of PFC to prerequisites and consequences of consciousness,
+used fMRI as the primary measurement technique, which can potentially lead to discrepancies.
+In contrast, studies that support the opposite conclusion use electrophysiology
+(see \autoref{cha:paper-safavi2014} for a short discussion).
+Second, a large portion of studies that support a mechanistic role for PFC in conscious perception,
+use externally induced perceptual switches such as Binocular Flash Suppression (BFS) \cite{panagiotaropoulosNeuronalDischargesGamma2012}.
+Third, the majority of the experiments used behavioral reports by the subject in order to know the content of conscious experience (for a review see \cite{tsuchiyaNoReportParadigmsExtracting2015,kochNeuralCorrelatesConsciousness2016}).
+This study was an effort, to bring this controversy one step closer to the resolution by
+recording the neural activity from monkey ventro-lateral PFC (vlPFC) during a no-report Binocular Rivalry (BR) paradigm.
+
+Focus of investigations on phenomenon of BR, in terms of spatio-temporal scales of measurements,
+was mainly micro-scale (level of individual neurons) and macro-scale (level of large-scale networks)
+Almost all the previous studies either focus on the activity of feature selective neurons measured based on single unit recordings
+\cite{lehkyNoBinocularRivalry1996,sheinbergRoleTemporalCortical1997,kelirisRolePrimaryVisual2010,bahmaniNeuralCorrelatesBinocular2011,panagiotaropoulosNeuronalDischargesGamma2012},
+or the whole-brain dynamics measured with imaging techniques (EEG/MEG, fMRI)
+\cite{wangBrainMechanismsSimple2013,lumerNeuralCorrelatesPerceptual1998,srinivasanIncreasedSynchronizationNeuromagnetic1999b,hippOscillatorySynchronizationLargescale2011a,doesburgRhythmsConsciousnessBinocular2009b,tononiNeuralCorrelatesConsciousness2008,imamogluChangesFunctionalConnectivity2012}
+(for reviews see \cite{blakeVisualCompetition2002a,panagiotaropoulosSubjectiveVisualPerception2014a,kochNeuralCorrelatesConsciousness2016}).
+A complex system perspective to binocular rivalry phenomenon, motivates observation of the system in a mesoscopic scale as a very first step to understand the role of neural interactions (see \autoref{sec:why-it-appealing} for further elaboration).
+In this study, we address this need, by measuring spiking activity of neural populations in vlPFC with multi-electrode recording techniques.
+
+
+\subsection*{Material and Methods}\label{sec:papers-biorxiv2020-material-methods}
+In this study, we investigate the neural correlate of visual awareness in mesoscopic scale.
+Recording procedure is similar to awake experiments of \nameref{cha:paper-safavi2018} explained earlier (see \matmet of \autoref{sec:papers-pnas2018-material-methods}).
+The core behavioral paradigm used in this study was a passive ambiguous stimulation, 
+and consist of two tasks, Binocular Rivalry (BR) and Physical Alternation (PA).
+Both tasks consist of fixation period similar to fixation task explained earlier in \autoref{sec:papers-pnas2018-material-methods},
+and followed by presentation of 1 or 2 seconds  upward or downward moving gratings
+(presented only to one eye -- half of the trials for each eye).
+After the phase of stimulus presentation,
+in PA trials, the first stimulus was removed and a moving grating in the contralateral eye was presented in the opposite direction.
+BR trials had the identical structure of the stimulus presentation,
+but with the difference that, the second stimulus was presented without removing the first stimulus.
+In BR trials that two opposite moving grating were presented simultaneously, 
+the perception of the monkey spontaneously switches between the stimulus
+(\ie upward and downward grating) across the the entire length of trial (8-10 seconds).
+Whereas, in PA trials, there are no perceptual switches,  but perception of the animal changes by the alternation of the presented stimuli (upward and downward grating).
+Parameters of the visual stimulus (moving gratings) are identical to the experiment explained in \autoref{sec:papers-pnas2018-material-methods}.
+Furthermore, Optokinetic Nystagmus (OKN) reflexes
+\footnote{
+  OKN reflexes are characteristic patterns of eye movements in response to moving stimuli,
+  that consist of smooth pursuit and fast saccadic eye movements.}
+has been used to determine the perception of the animal.
+
+In addition to the main experiment that consist of BR and PA tasks,
+we additionally have a control experiment for controlling eye movement as a confounding factor.
+Given that determining the animal perception is based on eye movements (OKN reflexes),
+to rule out the eye movement as a confounding factor,
+we perform a passive fixation experiment similar to the awake experiment of \nameref{cha:paper-safavi2018} explained earlier (see \matmet of \autoref{sec:papers-pnas2018-material-methods}), but without eye movement.
+In this experiment, the eye movement during presentation of moving grating were suppressed by instructing the animal to maintain the fixation during the task
+(by overlaying a fixation point with size of $1$-$2^\circ$ on top of the moving grating).
+
+\subsection*{Results}
+Firstly, the perpetual dominance periods detected based on OKN reflexes follow a gamma distribution which is compatible with previous studies \cite{leveltNoteDistributionDominance1967}.
+This indicates that using no-report paradigms of BR lead to compatible results with human studies.
+Given the availability of neurons [recorded by Utah array] that respond to direction of motion of moving grating stimuli in PFC (see \nameref{cha:paper-safavi2018}),
+we can quantify the proportion of perceptual modulation of neurons in our experiment that use upward and downward moving gratings as rivaling patterns. 
+Interestingly, compatible with previous studies that used different tasks and visual stimuli \cite{panagiotaropoulosNeuronalDischargesGamma2012},
+majority of sensory modulated units were also perceptually modulated.
+Moreover, in the population level, the content of conscious perception of the animals was decodable from spiking activity of neural populations in vlPFC.
+Lastly, the decoding algorithm that we used for decoding the content of the perception \cite{meyersNeuralDecodingToolbox2013},
+could also reliably decode the content of the presented visual stimulus
+(in the passive fixation experiment) both in presence and absence of eye movement
+\ie training the decoder with responses in presence of eye movement,
+and test when the eye movement are suppressed (fixation-on task) and vice versa.
+Therefore, our control analysis suggest that
+eye movements are not a confounding factor for our perceptual modulation.
+
+
+\subsection*{Conclusion}
+In this study, we showed that activity of the majority of sensory modulated neurons of vlPFC is correlated with conscious perception in a no-report binocular rivalry task,
+and the content of conscious experience is decodable from mesoscopic dynamics of PFC.
+Moreover, this study has an important implication for the neural correlate of visual awareness.
+This study adds another piece of evidence for the involvement of PFC in conscious perception
+which has been an important debate in the field of consciousness research in the last few years (also see \nameref{cha:paper-safavi2014}).
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:
+
+
+

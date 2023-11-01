@@ -1,0 +1,87 @@
+\chapter{Paper \rom{6}} \label{cha:paper-safavi2018}
+
+\section*{Paper information} % 
+
+\input{chapters/paperInfo_safavi2018nss.tex}
+
+\section*{Summary} %
+\subsection*{Motivation}
+
+It has been suggested that mammalian's neocortex follow certain canonical features
+\cite{douglasCanonicalMicrocircuitNeocortex1989,douglasNeuronalCircuitsNeocortex2004,douglasMappingMatrixWays2007,harrisCorticalConnectivitySensory2013}.
+One of the features is in the spatial pattern of connectivity.
+Indeed, there is a large body of evidence suggesting that functional connectivity, inferred based on spike count correlations \cite{cohenMeasuringInterpretingNeuronal2011},
+rapidly decay as a function of lateral distance in most of the sensory areas of the brain
+\cite{constantinidisCorrelatedDischargesPutative2002,rothschildFunctionalOrganizationPopulation2010,cohenMeasuringInterpretingNeuronal2011,smithSpatialTemporalScales2008a,smithSpatialTemporalScales2013a,denmanStructurePairwiseCorrelation2014}.
+Nevertheless, there are functional and anatomical evidence,
+that hint at deviations from these canonical features in PFC.
+PFC is a central sub-network [in a graph-theoretic sense]  \cite{modhaNetworkArchitectureLongdistance2010} that play a crucial role in cognitive computations \citep{millerIntegrativeTheoryPrefrontal2001},
+especially due to an increase in the integrative aspect of information processing in higher-order cortical areas.
+Moreover, anatomical studies have shown that in contrast to early visual cortical areas
+where we have a limited spread of lateral connections, in later stages of cortical hierarchy like PFC
+\cite{amirCorticalHierarchyReflected1993,kritzerIntrinsicCircuitOrganization1995,angelucciCircuitsLocalGlobal2002,tanigawaOrganizationHorizontalAxons2005,vogesModelerViewSpatial2010}
+lateral connections are considerably expanded 
+\cite{levittTopographyPyramidalNeuron1993,amirCorticalHierarchyReflected1993,lundComparisonIntrinsicConnectivity1993,kritzerIntrinsicCircuitOrganization1995,fujitaIntrinsicConnectionsMacaque1996,tanigawaOrganizationHorizontalAxons2005}.
+In this study, we investigate the functional connectivity ventro-lateral PFC (vlPFC) as a function of lateral distance.
+
+\subsection*{Material and Methods}\label{sec:papers-pnas2018-material-methods}
+In this study, we investigate the correlated fluctuations of single-neuron discharges in a mesoscopic scale.
+Electrophysiology data was recorded from 4 macaque monkeys,
+two in anesthetized state, and two in awake state.
+Spiking activity was recorded from a Utah array chronically implanted in vlPFC.
+For the awake experiments, monkeys were trained to fixate for 1000 ms on
+moving grating in 8 different directions distributed randomly across multiple trials.
+Tasks were started with the appearance of a red dot as a fixation point (with the size of $0.2^\circ$) on the screen for $\sim$300 ms (followed by a moving grating in one of the 8 directions).
+The moving grating was only presented if the monkey maintains the fixation for the $\sim$300 ms period.
+Moving grating had the size of $8^\circ$, speed of 12-13 degrees per second, and spatial frequency of 0.5 cycles per degree.
+
+In anesthetized experiments, monkeys were exposed with 10 s of stimulation with natural movies.
+Both awake and anesthetized experiments also included,
+spontaneous sessions where neural activities recorded in the absence of any behavioral task.
+
+Tuning curves were computed based on conventional procedures \cite{cohenMeasuringInterpretingNeuronal2011} by averaging the firing rate across trials for each of the eight presented directions of motion.
+Signal correlations were defined as the correlation coefficient between the tuning curves of a neuronal pair.
+
+Noise correlations for anesthetized data were computed by dividing the period of visual stimulation into 10 periods, each being 1000 ms long, and considered these periods as different successive stimuli.
+The same procedure was used for the intertrial periods as well.
+In the awake data, visual stimulation and intertrial periods were 1000 ms long each;
+therefore, no additional procedure was required.
+In the spontaneous data (both anesthetized and awake),
+the entire length of the recording period was divided into periods of 1000 ms bins and they were treated as a trial.
+
+The spike count correlation coefficients were computed similarly to previous classical studies
+\cite{bairCorrelatedFiringMacaque2001a}
+First, for each condition (either presentation of each moving grating in awake experiment or a single bin of movie clip in the anesthetized experiment),
+we normalized the spike counts across all trials by converting them into z scores.
+For each pair, we computed the Pearson's correlation coefficient for normalized spike counts and averaged across conditions to obtain the correlation value.
+
+
+\subsection*{Results}
+
+We found that the spatial structure of functional connectivity
+(measured based on noise correlations) in vlPFC is different from most of the sensory cortices.
+In most sensory cortices, noise correlations decay monotonically as a function of distance;
+nevertheless, in vlPFC we observed in both anesthetized and
+awake monkeys noise correlation rises again after an initial decay.
+Moreover, we showed that the characteristic non-monotonic spatial
+structure in vlPFC,
+is pronounced with structured visual stimulation.
+
+
+\subsection*{Conclusion}
+
+Our results suggest that spatial inhomogeneities in the functional
+architecture of the PFC arise from strong local and long-range lateral
+interactions between neurons.
+These characteristic patterns of interactions among PFC neurons lead
+to a non-monotonic spatial structure of correlations in vlPFC.
+Moreover, the mentioned spatial inhomogeneities are pronounced during structured
+visual stimulation in the awake state which can be instrumental for
+distributed information processing in PFC.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:
+
+

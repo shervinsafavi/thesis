@@ -1,0 +1,303 @@
+\chapter{Brain as a complex \emph{\&} adaptive system}\label{cha:brain-as-complex-adaptive}
+In \autoref{cha:brain-as-complex}, we argue that brain can be approached as a complex system.
+Certainly, this is a valuable perspective toward the brain and was the pivotal idea of this thesis.
+Nevertheless, an important aspect of the brain, as a biological information processing system,
+is not taken into account in the approach we followed and discussed in this thesis.
+This important aspect is \emph{adaptivity} of humans/animals.
+They need to be \emph{adaptive} in order to survive.
+That being said, perhaps we should consider humans/animals as \emph{adaptive agents} and the brains as a complex \emph{and} adaptive system.
+Indeed, Complex Adaptive Systems (CAS) have been an independent field of research 
+(see \citeAYt{hollandStudyingComplexAdaptive2006} for a brief review).
+
+\marginpar{Approaching the brain as a complex \textbf{and} adaptive system}
+
+
+Inspired by general properties and mechanisms introduced for CAS
+(that are briefly discussed in \autoref{sec:compl-adapt-syst}), 
+again, new questions can be asked in various domains of neuroscience, 
+and moreover, even old questions can be revisited based on this perspective.
+In this chapter, we introduce a set of new research directions that we believe are complementary to the ideas that motivated and shaped this thesis.
+
+Conceiving the brain as a CAS implies that certain computations are needed to satisfy the adaptivity of the agent (see \autoref{sec:comp-object} for further elaboration).
+Moreover, as we discussed earlier (see \autoref{cha:brain-as-complex}),
+conceiving the brain as a complex system has implications on the dynamics of the brain.
+%
+More generally, on one hand, behavior is a rich source for seeking and understanding the computational objectives
+(pertaining to adaptivity of humans and animals)
+% 
+\marginpar{Through behavior we can understand computation needed to be adaptive and through multi-scale dynamics of the brain we can understand the brain's biophysical machinery}
+% 
+On the other hand, multi-scale dynamics of the brain, as briefly discussed in \autoref{cha:appr-thro-nda},
+is a rich source for understanding the biophysical machinery of this adaptive agent implementing the computation.
+% 
+For instance, concerning the adaptivity of the humans and animals, focusing on behavior have led us to various developments in
+ecological psychology \cite{reedEncounteringWorldEcological1996},
+reinforcement learning \cite{nivReinforcementLearningBrain2009},
+and even understanding the emotion \cite{bachAlgorithmsSurvivalComparative2017}
+that all inform us about the brain computations \cite{nivPrimacyBehavioralResearch2020}. 
+Concerning the multi-scale dynamics,
+studying the brain across scales,
+has helped us to understand the emergent properties of this biophysical machinery
+(for further elaboration, see \citet[Chapter 1]{pesensonMultiscaleAnalysisNonlinear2013} and \citet{siettosMultiscaleModelingBrain2016}).
+
+From a broader perspective, particularly in terms of Marr's levels of understating \cite{marrUnderstandingComputationUnderstanding1979},
+it can  be argued that, understanding the brain dynamics,
+brings us closer to  the implementation level and perhaps to some degree to the algorithmic level;
+and understating the behavior brings us closer to understanding the computation and more explicitly the algorithm.
+With no doubt, both of these aspects are utterly important for understating the brain.
+% 
+\marginpar{An \textbf{integrative} understating of the brain need a bridge}
+% 
+Therefore, it is import to establish a connection between these two, in order gain an \emph{integrative} understating of the brain
+(see \citet[Chapter 2, Section 2]{churchlandComputationalBrain1992} for a broad perspective on the importance of this bridge and \citet{stephanTranslationalPerspectivesComputational2015} and \citet[Chapter 8]{forstmannIntroductionModelbasedCognitive2015} for showcases of their importance in  translational neuroscience).
+Motivated by the importance of establishing this bridge,
+in \autoref{sec:relat-behav-multi} we outline various approaches we can take for relating behavior to multi-scales brain dynamics.
+
+
+\section{Complex adaptive systems}\label{sec:compl-adapt-syst}
+
+Complex adaptive systems (CAS) can be broadly defined as a system composed of multiple elements, called agents,
+\emph{"that learn or adapt in response to other agents"} \cite[Chapter 3]{hollandComplexityVeryShort2014}.
+CAS have been studied for decades (see \citet{morowitzMindBrainComplex1995} for historical note),
+and there have been efforts to explain the behavior of various natural and artificial systems based on the CAS formalism;
+They include adaptive behavior of the immune system \cite{chowdhuryImmuneNetworkExample1999},
+finical market \cite{hollandComplexityVeryShort2014}
+and even language \cite{ellisLanguageComplexAdaptive2009}.
+
+Different sets of properties and mechanisms which are considered to be common between different CAS have been suggested
+\cite{brownleeComplexAdaptiveSystems2007}.
+We outline the 4 features proposed by \citet{hollandStudyingComplexAdaptive2006}.
+Although, some of the core ideas are common among most of the other proposals and indeed those commonalities are the foundations for ideas presented in the following,
+but readers are also encouraged to refer to properties and mechanism proposed by others as well (for example see \citet{gell-mannComplexAdaptiveSystems1994} and \citet[Chapter 1]{arthurEconomyEvolvingComplex1997}).
+
+\citet{hollandStudyingComplexAdaptive2006} introduces 4 major features or characteristics that CAS have in common in spite of their substantial differences:
+\begin{enumerate}
+\item Parallelism:
+  Complex systems (also briefly discussed in \autoref{cha:brain-as-complex}) are constructed with many \emph{intently interacting} components.
+  Due to the need for tight coordination, simultaneous communications between components of the system are inevitable.
+\item Conditional actions:
+  In CAS, agents need to act conditionally as the required action is defined by the agent's internal state (condition) and actions of external agents.
+\item Modules and hierarchies:
+  CAS are often organized in a modular and hierarchical fashion (for the latter see \cite[Chapter 7]{hollandComplexityVeryShort2014} and \cite[Chapter 8]{hollandSignalsBoundariesBuilding2012a}).
+\item Adaptation and evolution:
+  Agents in CAS need to change over time in order to gain a better performance.
+  Adaptation requires solutions to two important problems, namely \emph{credit assignment} and \emph{rule discovery}.
+\end{enumerate}
+Features or characteristics mentioned in the number two and four of Holland's idea are particularly pertaining to \emph{computations} that CAS need to perform.
+Interestingly, some of these computations are already a focus of research in the field of neuroscience as well
+(but not necessarily based on a similar foundation we motivate by CAS ideas).
+In section \autoref{sec:comp-object} we briefly discuss some of these computational objectives that can be closely connected to the brain.
+
+\section{Brain computational objectives}\label{sec:comp-object}
+As briefly  discussed earlier, humans/animals as information processing systems,
+are adaptive agents, and need to interact with a complex environment.
+We can conceive the brain as a CAS, and based on CAS notions introduced earlier,
+we can argue that due to their adaptivity they need to perform certain computations.
+Indeed, \citet[Chapter 12]{mitchellComplexityGuidedTour2011} argue that,
+\begin{displayquote}\textsl{
+    "At a very general level, one might say that computation is what
+    a complex system does with information in order to succeed or adapt in its
+    environment."
+  }
+\end{displayquote}
+
+
+To emphasize conceiving the brain as a CAS and the computations it implies, 
+we highlight some of the computational objectives of the brain that are under active investigation \emph{and}
+and are closely related to general properties of CAS discussed in \autoref{sec:compl-adapt-syst}.
+The need for \emph{conditional actions}, solving the \emph{credit assignment} problem and \emph{discovering rules} in the environment
+that were mentioned in \autoref{sec:compl-adapt-syst} as general properties of CAS,
+are closely related to \emph{representation}, \emph{decision making} and \emph{reinforcement learning}
+which are actively investigated in neuroscience.
+
+One of these computational objectives is efficient representations.
+The ability of an agent to act upon actions and states of external agents relies on \emph{efficient representation} of information pertaining to external agents.
+The other computational objective is credit assignment and rule discovery that are both premises of reinforcement learning \cite{woergoetterReinforcementLearning2008}.
+
+Certainly, this section, by no means, provides a comprehensive list of computational objectives of the brain that have been already studied in neuroscience.
+Rather, it highlights examples that are closely related to the ones CAS should have in a general sense.
+In the next step, we need to find the connections between these computational objectives and their biophysical machinery by investigating the relationship between behavior and multi-scale dynamics of the brain. 
+
+\section{Relating behavior to multi-scale brain dynamics}\label{sec:relat-behav-multi}
+As argued earlier, behavior is a rich source for understating such computational objectives in human/animals and 
+multi-scale dynamics is a rich source for understating the biophysical machinery behind it.
+This is the motivation for relating the behavior to multi-scale brain dynamics.
+In this section, we introduce potential approaches that we think can relate these two facets of the brain.
+
+Certainly, establishing this connection is challenging.
+Therefore, we need to decompose it into smaller but complementary steps that can be supported by the existing models and/or empirical evidence.
+In the next sections 
+(\autoref{sec:relat-neur-dynam}, \autoref{sec:expl-models-pivot}, and \autoref{sec:princ-framw-data}),
+we propose various approaches that are more or less accessible and can potentially bring us a few steps closer to establishing a bridge between behavior and multi-scale brain dynamics.
+
+\subsection{Relating neural dynamics and neural computation}\label{sec:relat-neur-dynam}
+
+As discussed earlier, neural computation and dynamics are both important aspects of the brain.
+There are various frameworks and models in neuroscience which are either centered around
+neural computation
+\cite{lengyelMatchingStorageRecall2005,deneveBayesianSpikingNeurons2008a,deneveBayesianSpikingNeurons2008,tanakaRecurrentInfomaxGenerates2008,buesingNeuralDynamicsSampling2011,boerlinPredictiveCodingDynamical2013,billDistributedBayesianComputation2015,chalkNeuralOscillationsSignature2016,zeldenrustEfficientRobustCoding2019,echevesteCorticallikeDynamicsRecurrent2020}
+or neural dynamics
+\cite{bertschingerRealtimeComputationEdge2004,eliasmithUnifiedApproachBuilding2005,sussilloNeuralCircuitsComputational2014,hidalgoInformationbasedFitnessEmergence2014a,shrikiOptimalInformationRepresentation2016,maassSearchingPrinciplesBrain2016,kimLearningRecurrentDynamics2018,chenComputingModulatingSpontaneous2019,michielsvankessenichPatternRecognitionNeuronal2019,finlinsonOptimalControlExcitable2020}
+but also have some implications for the other one
+(also see \citet{maassSearchingPrinciplesBrain2016} for a brief review).
+These models are not necessarily well connected to \emph{behavior} and \emph{multi-scale} dynamics of the brain,
+but still can fill some space in this large gap between behavior and multi-scale.
+Further investigation in such frameworks and models, that are outlined in the next sections,
+can potentially help us to accomplish the mentioned goal,
+which is relating behavior to multi-scale brain dynamics.
+
+\subsubsection{Normative models with implications for neural dynamics}\label{sec:norm-models-with}
+There have been various efforts to relate neural computation to neural dynamics by introducing normative models of neural computation (\eg based on sampling theories, Bayesian inference algorithms) which can explain some aspects of observed dynamics of the brain such as irregular spiking and neural oscillations
+\cite{ermentroutRelatingNeuralDynamics2007c,buesingNeuralDynamicsSampling2011,boerlinPredictiveCodingDynamical2013,billDistributedBayesianComputation2015,chalkNeuralOscillationsSignature2016,mastrogiuseppeLinkingConnectivityDynamics2018,echevesteCorticallikeDynamicsRecurrent2020,dubreuilComplementaryRolesDimensionality2020}.
+More generally there have been efforts to relate the state of the machinery implementing a given neural computation to a putative dynamical regime of the neural circuits.
+For instance, \citet{echevesteCorticallikeDynamicsRecurrent2020} and \citet{lengyelMatchingStorageRecall2005} have developed neuronal networks which implement Bayesian inference
+that are attractor networks as well.
+Neural coding, in particular, is one of the well established computations that brain needs to accomplish \cite{quianquirogaPrinciplesNeuralCoding2013}
+and there have been various efforts to connect neural coding and neural dynamics \cite{ermentroutRelatingNeuralDynamics2007c,boerlinPredictiveCodingDynamical2013,chalkNeuralOscillationsSignature2016,echevesteCorticallikeDynamicsRecurrent2020}.
+In most of such normative models, we optimize or train a network of neurons based on a specific computational objective (such as reconstruction error),
+and the features of the neural dynamics appear in the resulting network activity automatically.
+
+All the features of neural dynamics that have been explained by the previous normative models are among the important ones and some  of them are even considered computationally relevant
+(like oscillations \cite{chalkNeuralOscillationsSignature2016,petersonHealthyOscillatoryCoordination2018}).
+Nevertheless, the brain dynamics has been shown to be more complex than the reach of normative models so far \cite{decoDynamicBrainSpiking2008,breakspearDynamicModelsLargescale2017}.
+Not only in terms of complexity of the observed dynamics,
+but also in terms of scale, particularly large scale dynamics
+and multi-scale dynamics \cite{freemanScalefreeNeocorticalDynamics2007a,agrawalScaleChangeSymmetryRules2019}.
+Next steps should include developing normative models with richer neural dynamics, in particular, the large scale and multi-scale dynamics.
+
+\subsubsection{Models of neural dynamics with implications  for neural computation}
+
+One of the frameworks for explaining the neural dynamics with connection to neural computation is the ``criticality hypothesis of the brain'' 
+(for a review see \cite{munozColloquiumCriticalityDynamical2018} -- also briefly discussed in \autoref{sec:crit-hypoth-brain}).
+Certainly, frameworks like criticality are insightful for brain dynamics
+\cite{munozColloquiumCriticalityDynamical2018}
+in particular because they provide explanations for observed multi-scale dynamics of the brain \cite{agrawalScaleChangeSymmetryRules2019}.
+
+One approach to better connect the criticality hypothesis of the brain to neural computation could be the one we used in \autoref{cha:appr-thro-theo},
+which is searching for signatures of criticality in neuronal networks that can be optimized based functionally relevant computational objectives
+(in \autoref{cha:appr-thro-theo}, we used efficient coding objectives).
+Of course, this is not necessarily informative on a mechanistic level,
+rather is an indication of \emph{potential} connections.
+Presence of signatures of criticality may or may not hint for more mechanistic approaches.
+Nevertheless, some clues can guide us toward more formal investigations.
+For instance, for the particular case discussed in \autoref{cha:appr-thro-theo},
+Fisher information can be a candidate quantity that both frameworks -- efficient coding \cite{weiMutualInformationFisher2015} and criticality \cite{prokopenkoRelatingFisherInformation2011,danielsQuantifyingCollectivity2016,kalloniatisFisherInformationCriticality2018,kueblerOptimalFisherDecoding2019} -- use to assess the closeness to their optimal point.
+
+Another potential approach is seeking 
+for other kinds of functionally relevant attributes for notions established in criticality hypothesis of the brain.
+For instance, it has been suggested that neural avalanches are related to cell assemblies  \cite{plenzOrganizingPrinciplesNeuronal2007} and
+indeed the notion of cell assemblies are closely connected to computations implemented in the brain 
+\cite{singerFormationCorticalCell1990a,harrisOrganizationCellAssemblies2003,harrisNeuralSignaturesCell2005a,buzsakiNeuralSyntaxCell2010b,tetzlaffUseHebbianCell2015}.
+
+\subsection{Exploiting models of pivotal tasks}\label{sec:expl-models-pivot}
+For the purpose expressed in \autoref{sec:relat-behav-multi}, we can also exploit behavioral tasks which have been comprehended from a wide range of perspectives.
+To the best of my knowledge, not so many such tasks are identified and exhaustively explored.
+Nevertheless, we believe this small number is sufficient to  make further exploration in this direction justified, given the potential insight that we can get from them.
+For instance, \citet{cavanaghCircuitMechanismIrrationalities2019} studied perceptual decision-making through interventional experimentation, and multi-scale computational modeling.
+Indeed, such theory-experiment hybrid approaches can be insightful,
+both for understanding the multi-scale dynamics of the phenomenon (in this case from synapse to behavior) and also the computations involved in the task (in this case evidence accumulation process).
+\citet{frankLinkingLevelsComputation2015} and colleagues also studied the decision making and cognitive control through reinforcement learning models and biophysical modeling of a single cortico-basal ganglia circuit and
+similarly, they could gain an integrative understating of the involved computation and also biophysical and dynamical characteristics that have been observed during such tasks.
+A key in both examples was exploiting the tasks that have been comprehended from a wide range of perspectives
+(normative modeling, biophysical modeling, measuring electrophysiological activity of involved circuits).
+
+One example of such tasks that has been studied from a wide range of perspectives and wide range of tools is the \emph{bistable perception}.
+On one hand, a large body of computational studies focus on explaining the dynamics of bistable perception \cite{moreno-boteNoiseinducedAlternationsAttractor2007a,shpiroBalanceNoiseAdaptation2009a,pastukhovMultistablePerceptionBalances2013a,vattikutiCanonicalCorticalCircuit2016,cohenDynamicalModelingMultiscale2019}; 
+On the other hand, another class of computational models which
+tried to explain the phenomenon with normative approaches centered around the computation that the brain might need to perform pertaining to perception \cite{bialekRandomSwitchingOptimal1995,dayanHierarchicalModelBinocular1998,hohwyPredictiveCodingExplains2008a,atwalStatisticalMechanicsMultistable2014a,samuelgershmanPerceptualMultistabilityMarkov2014a}.
+Notably, most of these studies are centered around Bayesian model of the brain \cite{knillBayesianBrainRole2004,doyaBayesianBrainProbabilistic2007}.
+
+Next to this extensive computational models
+(which include both normative and biophysical models)
+there is a large body of psychophysical (for review see \cite{klinkUnitedWeSense2012b}), electrophysiological and imaging
+(for review see \cite{blakeVisualCompetition2002a,panagiotaropoulosSubjectiveVisualPerception2014a}), pharmacological \cite{carterPsilocybinSlowsBinocular,mentchGABAergicInhibitionGates2019}, and genetic studies \cite{millerGeneticContributionIndividual2010,ngoPsychiatricGeneticStudies2011a,lawEffectStimulusStrength2017,chenGenomicAnalysesVisual2018}.
+Particularly, as briefly discussed in \autoref{cha:appr-thro-behav}, from electrophysiological and imaging we learn that a distributed network of neurons is involved in the phenomenon and therefore this is inherently a multi-scale problem.
+
+We believe a wide range of perspectives toward the phenomenon of bistable perception,
+that led to this immense range of studies and their resulting insight,  
+justify bistable perception as one of the ideal tasks to be studied with the purpose of relating behavior (and their accompanied computation) to multi-scales brain dynamics.
+In this thesis, we approach the phenomenon of binocular rivalry differently from the conventional approaches (see \autoref{cha:appr-thro-behav}),
+and our initial results (see \nameref{cha:paper-kapoor2020} and \nameref{cha:paper-dwarakanath2020}) justified the usefulness of our proposed mesoscopic scale observation of the brain during a binocular rivalry task.
+Indeed, a meso-scale observation can also be the first step for understanding the multi-scale dynamics of binocular rivalry.
+In \autoref{cha:appr-thro-nda} we introduced a set of novel methodologies for cross-scale and multi-scale analysis of neural data, in particular mesoscopic signals like LFPs.
+Transient and cooperative neural activities in hippocampus (such as sharp wave-ripples) have been studied extensively.
+As exemplified in \autoref{sec:need-new-tools}, such characteristic events
+can co-occur with well-coordinated activity in smaller scales (scale of neurons and population of neurons),
+and a larger scale (whole brain) as well.
+Therefore, investigating the presence of such events in the mesoscopic activity of neurons during binocular rivalry [assuming their existence] and
+the relationship between these neural events and behavior can potentially bridge the multi-scale dynamics of the brain and behavior (which is binocular rivalry in this case). 
+
+Indeed, recent electrophysiological studies in the cortex also revealed neural activities with cooperative and transient nature that are involved in cognitive functions other than memory consolidation. 
+For instance, \citet{womelsdorfBurstFiringSynchronizes2014} reported burst firing events in Prefrontal Cortex accompanied with particular large-scale synchronization patterns and attention switches.
+
+What has been discussed can be a potential road map to bridge the multi-scale dynamics of the brain and behavior in binocular rivalry,
+but still the connection to computation remains elusive.
+Regarding the computations that brain presumably needs to perform, as mentioned earlier,
+there are already computational models
+\cite{bialekRandomSwitchingOptimal1995,dayanHierarchicalModelBinocular1998,hohwyPredictiveCodingExplains2008a,atwalStatisticalMechanicsMultistable2014a,samuelgershmanPerceptualMultistabilityMarkov2014a}.
+Some of these models can even explain many aspects of binocular rivalry psychophysics and some aspects of neural dynamics \cite[Chapter 3]{leptourgosDynamicalCircularInference2018}.
+Certainly, bridging the multi-scale dynamics and computations explicitly, should be investigated in the next steps. 
+
+\subsection{A principled framework for data fusion}\label{sec:princ-framw-data}
+One of the core components of the proposed goal, \emph{relating behavior to multi-scale brain dynamics},
+is relating dynamics of the brain across scales even independent of behavior and computation.
+Indeed, in \autoref{cha:appr-thro-nda}, we introduced novel methodologies for the very same purpose -- bridging the scales.
+Nevertheless, most of such methodologies (including the ones introduced in this thesis) are designed for particular choices of data modalities (\eg spike-LFP coupling, LFP-BOLD relationship).
+This implies, for each pair of modalities, we tend to develop a set of tools accustomed to the nature of that particular type of data (which is a reasonable choice for the first try).
+Of course, such modality-specific methodologies have been insightful and certainly will be,
+but having a general framework which is capable of embedding or allowing the investigation of different datasets in a common space
+can potentially bring a wider range of opportunities for investigating brain dynamics across scales and ultimately relate them to the behavior and computation.
+
+Indeed, a few frameworks exploiting kernel-based methods \cite{biessmannTemporalKernelCCA2009,murayamaRelationshipNeuralHemodynamic2010,biessmannAnalysisMultimodalNeuroimaging2011,fazliLearningMoreOne2015} and topological data analysis \cite{zhangTopologicalPortraitsMultiscale2020}  have been proposed,
+that are potentially capable of fusing multi-modal data in a principled fashion.
+Next steps should include broad investigation of such frameworks for various modalities including the ones accessible via invasive recording techniques such as spikes and extracellular field potentials
+(as they are less explored compared to non-invasive ones).
+In particular, data modalities that can be better represented by point processes (such as spike trains)
+are more challenging to be fused with the other kinds of neural data which are continuous in nature 
+(should be noted that there have been some efforts in this direction based on kernel-based methods \cite{shpigelmanSpikernelsPredictingArm2005,paivaReproducingKernelHilbert2009b,paivaInnerProductsRepresentation2010,liTensorproductkernelFrameworkMultiscale2014a}, and for a review see \citet{parkKernelMethodsSpike2013a}). 
+
+\section{Understating the neuro-principles through dysfunctions}
+Understanding the brain dysfunctions, in addition to its humanistic aspects and potential societal impacts can also be insightful for gaining a mechanistic understanding of the brain.
+In particular, understanding cognition and behavior is one of the most important goals of the brain science,
+and among brain dysfunctions, psychiatric disorders are specifically connected to the malfunctioned cognition and disorders of behavior \cite{huysAdvancesComputationalUnderstanding2020}.
+A window for understanding the machinery behind cognitive capabilities and neural correlates of behavior can happen through the understanding of when and why they malfunction \ie \emph{mechanistically} to understand the syndromes we observe in psychiatric disorders.
+
+
+Furthermore, Psychiatry is unique from various other perspectives.
+Approaches used for understanding the psychiatric disorders are extremely diverse.
+In terms of scales or levels of organization \cite[Chapter 1]{churchlandComputationalBrain1992}, 
+psychiatric disorders have been studied from their genetic basis 
+\cite{burmeisterPsychiatricGeneticsProgress2008,isslerDeterminingRoleMicroRNAs2015,smelandPolygenicArchitectureSchizophrenia2020}
+all the way to their roots in the social interactions 
+\cite{schilbachSecondpersonNeuropsychiatry2016,leongPromiseTwopersonNeuroscience2019,sevgiSocialBayesUsing2020}
+In terms of [Marr] levels of understanding \cite{marrUnderstandingComputationUnderstanding1979}, psychiatric disorders have been attacked in all three levels
+\cite[Chapter 5]{redishComputationalPsychiatryNew2016}\cite{huysAdvancesComputationalUnderstanding2020}.
+
+The mentioned diversity of approaches goes beyond the conventional research in the systems neuroscience. 
+As the last example, %for the diversity of the approaches, 
+it is worth mentioning the research on psychiatric disorders for establishing the connection between the nervous system and the immune system. 
+Recently, a peculiar connection between psychiatric disorders
+(in particular depression and schizophrenia)
+and dysfunctions of the immune system has been established 
+\cite{khandakerInflammationImmunitySchizophrenia2015,bullmoreInflamedMindRadical2018,teixeiraImmunopsychiatryClinicianIntroduction2019,yuanInflammationrelatedBiomarkersMajor2019,mayerOptimalImmuneSystems2017,schillerNeuronalRegulationImmunity2020,haddadMaternalImmuneActivation2020,khandakerNeuroinflammationSchizophrenia2020}
+and more generally the interaction between the immune system and the brain has been receiving more attention and support recently
+(\cite{bullmoreInflamedMindRadical2018, deabreuPsychoneuroimmunologyImmunopsychiatryZebrafish2018,badimonNegativeFeedbackControl2020,pfeifferBrainImmuneCells2020,shieldsPsychosocialInterventionsImmune2020,mSocialIsolationAlters2020,heineTransdiagnosticHippocampalDamage2020,korenRememberingImmunityNeuronal2020,kolMemoryOrchestraRole2021}).
+
+
+Despite this diversity, there are also potential connections and bridges between them.
+For instance, in many brain dysfunctions we have clues about both impaired computation and  brain dynamics.
+Whether there is a connection between them, it needs to be thoroughly investigated.
+However, at least the current state of [Computational] Psychiatry
+is not clueless about integration of neural computation and neural dynamics.
+For instance, \cite{deneveCircularInferenceMistaken2016}, based on their implementation of circular inference, 
+have suggested that pathological inference attributed in schizophrenia can be mapped into excitation-inhibition imbalance in the neural circuit implementing the inference.
+
+Overall, we believe, understating the brain dysfunction is an intriguing window for gaining an integrative understating of the brain function given the richness and diversity of the empirical data in the field.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:
+
+
+

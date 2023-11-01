@@ -1,0 +1,377 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis Configuration File
+%
+% The main lines to change in this file are in the DOCUMENT VARIABLES
+% section, the rest of the file is for advanced configuration.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT VARIABLES
+%	Fill in the lines below to enter your information into the thesis template
+%	Each of the commands can be cited anywhere in the thesis
+%----------------------------------------------------------------------------------------
+
+% Remove drafting to get rid of the '[ Date - classicthesis version 4.0 ]' text at the bottom of every page
+\PassOptionsToPackage{eulerchapternumbers,listings, pdfspacing, subfig,beramono,eulermath,parts}{classicthesis}
+% Available options: drafting parts nochapters linedheaders eulerchapternumbers beramono eulermath pdfspacing minionprospacing tocaligned dottedtoc manychapters listings floatperchapter subfig
+% Adding 'dottedtoc' will make page numbers in the table of contents flushed right with dots leading to them
+
+\newcommand{\myTitle}{Brain as a Complex System}
+\newcommand{\mySubtitle}{harnessing systems neuroscience tools \& notions for an empirical approach}
+
+\newcommand{\myName}{Shervin safavi\xspace}
+\newcommand{\myProf}{Dr.\ Nikos Logothetis\xspace}
+\newcommand{\myOtherProf}{Dr.\ Michel Besserve\xspace}
+\newcommand{\myReader}{Prof.\ Stefano Panzeri\xspace}
+
+\newcommand{\myInst}{Max Planck Institute for Biological Cybernetics\xspace}
+\newcommand{\myInstS}{Max Planck Institute for Intelligent Systems\xspace}
+\newcommand{\myInstDept}{Dept. of Physiology of Cognitive Processes\xspace}
+\newcommand{\myInstDeptLong}{Department of Physiology of Cognitive Processes\xspace}
+\newcommand{\myInstDeptS}{Dept. of Empirical Inference\xspace}
+\newcommand{\myInstDeptSlong}{Department of Empirical Inference\xspace}
+\newcommand{\myUni}{Eberhard Karls University of T\"ubingen\xspace}
+\newcommand{\ScFac}{Faculty of Science\xspace}
+\newcommand{\MedFac}{Faculty of Medicine\xspace}
+
+\newcommand{\myIMPRS}{IMPRS for Cognitive and Systems Neuroscience\xspace}
+\newcommand{\GTC}{Graduate Training Centre of Neuroscience\xspace}
+\newcommand{\NIP}{School of Neural Information Processing\xspace}
+\newcommand{\myFaculty}{where\xspace}
+
+\newcommand{\myLocation}{T\"ubingen, Germany\xspace}
+\newcommand{\myTime}{December 2019\xspace}
+\newcommand{\myVersion}{Version 0.0\xspace}
+
+%----------------------------------------------------------------------------------------
+%	USEFUL COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\ie}{i.\,e.\xspace}
+\newcommand{\Ie}{I.\,e.\xspace}
+\newcommand{\eg}{e.\,g.\xspace}
+\newcommand{\Eg}{E.\,g.\xspace}
+\newcommand{\seealso}{also can refer to the corresponding summary}
+\newcommand{\seealsos}{also can refer to the corresponding summaries}
+
+\makeatletter
+\newcommand*{\rom}[1]{\textsf{\expandafter\@slowromancap #1@}}
+\makeatother
+\newcommand{\matmet}{``Material and Methods''}
+
+\newcounter{dummy} % Necessary for correct hyperlinks (to index, bib, etc.)
+\providecommand{\mLyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+
+% separattor line, based on
+% https://tex.stackexchange.com/questions/130762/prl-style-horizontal-line-in-latex
+\newcommand{\PRLsep}{\noindent\makebox[\linewidth]{\resizebox{0.3333\linewidth}{1pt}{$\bullet$}}\bigskip}
+
+
+%----------------------------------------------------------------------------------------
+%	MATH/PHYSICS USEFUL COMMANDS
+%----------------------------------------------------------------------------------------
+\newcommand{\avg}[1]{\langle #1 \rangle} % for average
+\newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+%------------------------------------------------
+ 
+\PassOptionsToPackage{latin9}{inputenc} % latin9 (ISO-8859-9) = latin1+"Euro sign"
+\usepackage{inputenc}
+ 
+ %------------------------------------------------
+
+\PassOptionsToPackage{ngerman,american}{babel}  % Change this to your language(s)
+% Spanish languages need extra options in order to work with this template
+%\PassOptionsToPackage{spanish,es-lcroman}{babel}
+\usepackage{babel}
+
+%------------------------------------------------			
+
+% \PassOptionsToPackage{super, comma}{natbib}
+\PassOptionsToPackage{comma,square,numbers}{natbib}
+\newcommand\citeA[1]{\citeauthor{#1}}
+\newcommand\citeY[1]{(\citeyear{#1})}
+\newcommand\citeAYt[1]{\citeauthor{#1} (\citeyear{#1})}
+\newcommand\citeAYp[1]{(\citeauthor{#1} \citeyear{#1})}
+\newcommand\citeAYpwop[2]{(\citeauthor{#1} \citeyear[#2]{#1})} % wop = with options
+
+% \usepackage{natbib}
+
+\usepackage[			% use biblatex for bibliography
+	backend=biber,      % use biber or bibtex backend
+        style=numeric,   % choose style
+        citestyle=numeric-comp,
+	natbib=true,		% allow natbib commands
+	hyperref=true,	    % activate hyperref support
+	alldates=year,      % only show year (not month)
+        mincitenames=1,
+        maxcitenames=1,
+        backref=true,
+        doi=true,
+        url=false,
+        isbn=false,
+        eprint=false,
+        sorting=none
+        ]{biblatex}
+
+
+% Suppress "In:" for articles (by Herbert);
+% from https://tex.stackexchange.com/questions/10682/suppress-in-biblatex
+\renewbibmacro{in:}{}
+
+        
+\IfFileExists{/home/ssafavi/Nextcloud/libraries/zotlib.bib}{\bibliography{/home/ssafavi/Nextcloud/libraries/zotlib,locallib,tmplib}}{\bibliography{locallib,tmplib}}
+
+% % bib source setting (this might need to go to a seperate bib file)
+% \IfFileExists{/home/ssafavi/Nextcloud/libraries/zotlib.bib}{\bibliography{/home/ssafavi/Nextcloud/libraries/zotlib.bib,locallib,tmplib.bib}}{\bibliography{locallib.bib,tmplib.bib}}%,tmplib.bib}}
+        
+ %------------------------------------------------
+
+\PassOptionsToPackage{fleqn}{amsmath} % Math environments and more by the AMS 
+ \usepackage{amsmath}
+ 
+ %------------------------------------------------
+
+\PassOptionsToPackage{T1}{fontenc} % T2A for cyrillics
+\usepackage{fontenc}
+
+%------------------------------------------------
+
+\usepackage{xspace} % To get the spacing after macros right
+
+%------------------------------------------------
+
+\usepackage{mparhack} % To get marginpar right
+
+%------------------------------------------------
+
+\usepackage{fixltx2e} % Fixes some LaTeX stuff 
+
+%------------------------------------------------
+
+\PassOptionsToPackage{smaller}{acronym} % Include printonlyused in the first bracket to only show acronyms used in the text
+\usepackage{acronym} % nice macros for handling all acronyms in the thesis
+
+%------------------------------------------------
+
+%\renewcommand*{\acsfont}[1]{\textssc{#1}} % For MinionPro
+% \renewcommand{\bflabel}[1]{{#1}\hfill} % Fix the list of acronyms
+
+%------------------------------------------------
+
+\PassOptionsToPackage{pdftex}{graphicx}
+\usepackage{graphicx} 
+
+%----------------------------------------------------------------------------------------
+%	FLOATS: TABLES, FIGURES AND CAPTIONS SETUP
+%----------------------------------------------------------------------------------------
+
+\usepackage{tabularx} % Better tables
+\setlength{\extrarowheight}{3pt} % Increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % To be used with each float for alignment
+\usepackage{caption}
+\captionsetup{format=hang,font=small}
+\usepackage{subfig}  
+\usepackage{epstopdf} % eps conversion
+
+%----------------------------------------------------------------------------------------
+%	CODE LISTINGS SETUP
+%----------------------------------------------------------------------------------------
+
+\usepackage{listings} 
+\lstset{language=[LaTeX]Tex, % Specify the language for listings here
+keywordstyle=\color{RoyalBlue}, % Add \bfseries for bold
+basicstyle=\small\ttfamily, % Makes listings a smaller font size and a different font
+commentstyle=\color{Green}\ttfamily, % Color of comments
+stringstyle=\rmfamily, % Font type to use for strings
+numbers=left, % Change left to none to remove line numbers
+numberstyle=\scriptsize, % Font size of the line numbers
+stepnumber=5, % Increment of line numbers
+numbersep=8pt, % Distance of line numbers from code listing
+showstringspaces=false, % Sets whether spaces in strings should appear underlined
+breaklines=true, % Force the code to stay in the confines of the listing box
+frame=single, % Frame border - none/leftline/topline/bottomline/lines/single/shadowbox/L
+belowcaptionskip=.75\baselineskip % Space after the "Listing #: Desciption" text and the listing box
+}
+
+%----------------------------------------------------------------------------------------
+%	CUSTOMIZED color
+%----------------------------------------------------------------------------------------
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{grayForLinks}{gray}{0.40} %  %
+\definecolor{webgreen}{rgb}{0,.5,0}
+
+%----------------------------------------------------------------------------------------
+%	HYPERREFERENCES
+%----------------------------------------------------------------------------------------
+
+\PassOptionsToPackage{pdftex,hyperfootnotes=false,pdfpagelabels}{hyperref}
+\usepackage{hyperref}  % backref linktocpage pagebackref
+\pdfcompresslevel=9
+\pdfadjustspacing=1
+
+\hypersetup{
+% Uncomment the line below to remove all links (to references, figures, tables, etc)
+%draft, 
+colorlinks=true, linktocpage=true, pdfstartpage=1, pdfstartview=Fit,
+% Uncomment the line below if you want to have black links (e.g. for printing black and white)
+%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV, 
+breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,
+plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,
+hypertexnames=true, pdfhighlight=/O, urlcolor=grayForLinks, linkcolor=RoyalBlue, citecolor=webgreen,
+%------------------------------------------------
+% PDF file meta-information
+pdftitle={\myTitle},
+pdfauthor={\textcopyright\ \myName, \myInst},
+pdfsubject={},
+pdfkeywords={},
+pdfcreator={pdfLaTeX},
+pdfproducer={LaTeX with hyperref and classicthesis}
+%------------------------------------------------
+}   
+
+%----------------------------------------------------------------------------------------
+%	BACKREFERENCES
+%----------------------------------------------------------------------------------------
+
+\usepackage{ifthen} % Allows the user of the \ifthenelse command
+% \newboolean{enable-backrefs} % Variable to enable backrefs in the bibliography
+% \setboolean{enable-backrefs}{true} % Variable value: true or false
+
+% \newcommand{\backrefnotcitedstring}{\relax} % (Not cited.)
+% \newcommand{\backrefcitedsinglestring}[1]{(Cited on page~#1.)}
+% \newcommand{\backrefcitedmultistring}[1]{(Cited on pages~#1.)}
+% \ifthenelse{\boolean{enable-backrefs}} % If backrefs were enabled
+% {
+% \PassOptionsToPackage{hyperpageref}{backref}
+% \usepackage{backref} % to be loaded after hyperref package 
+% \renewcommand{\backreftwosep}{ and~} % separate 2 pages
+% \renewcommand{\backreflastsep}{, and~} % separate last of longer list
+% \renewcommand*{\backref}[1]{}  % disable standard
+% \renewcommand*{\backrefalt}[4]{% detailed backref
+% \ifcase #1 
+% \backrefnotcitedstring
+% \or
+% \backrefcitedsinglestring{#2}
+% \else
+% \backrefcitedmultistring{#2}
+% \fi}
+% }{\relax} 
+
+%----------------------------------------------------------------------------------------
+%	AUTOREFERENCES SETUP
+%	Redefines how references in text are prefaced for different 
+%	languages (e.g. "Section 1.2" or "section 1.2")
+%----------------------------------------------------------------------------------------
+
+\makeatletter
+\@ifpackageloaded{babel}
+{
+\addto\extrasamerican{
+\renewcommand*{\figureautorefname}{Figure}
+\renewcommand*{\tableautorefname}{Table}
+\renewcommand*{\partautorefname}{Part}
+\renewcommand*{\chapterautorefname}{Chapter}
+\renewcommand*{\sectionautorefname}{Section}
+\renewcommand*{\subsectionautorefname}{Section}
+\renewcommand*{\subsubsectionautorefname}{Section}
+}
+\addto\extrasngerman{
+\renewcommand*{\paragraphautorefname}{Absatz}
+\renewcommand*{\subparagraphautorefname}{Unterabsatz}
+\renewcommand*{\footnoteautorefname}{Fu\"snote}
+\renewcommand*{\FancyVerbLineautorefname}{Zeile}
+\renewcommand*{\theoremautorefname}{Theorem}
+\renewcommand*{\appendixautorefname}{Anhang}
+\renewcommand*{\equationautorefname}{Gleichung}
+\renewcommand*{\itemautorefname}{Punkt}
+}
+\providecommand{\subfigureautorefname}{\figureautorefname} % Fix to getting autorefs for subfigures right
+}{\relax}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+
+\usepackage{classicthesis} 
+
+%----------------------------------------------------------------------------------------
+%	ShS SPECIFIC PACKAGES
+%----------------------------------------------------------------------------------------
+
+\usepackage{comment}
+\numberwithin{equation}{chapter}
+\numberwithin{figure}{chapter}
+
+\usepackage{pdfpages} % for adding PDF files
+
+\usepackage{nameref}
+
+% \usepackage{dirtytalk}
+\usepackage{csquotes}
+
+% for adding chemical stuff
+\usepackage{chemmacros}
+\chemsetup[phases]{pos=sub}
+
+%----------------------------------------------------------------------------------------
+%	ShS SPECIFIC settings
+%----------------------------------------------------------------------------------------
+
+% \setlength{\parskip}{10pt}       % to increase the space between paragraphs
+\usepackage{animate}             % for animations
+\def \fmisc {./gfx/} % address for addiional figures
+\usepackage{microtype}             
+
+
+%----------------------------------------------------------------------------------------
+% additional packages
+\usepackage{bibentry}
+
+
+%----------------------------------------------------------------------------------------
+%	ShS COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{pantone328}{cmyk}{1,0,0.57,0.30}
+\input{ccfg.tex}
+\colorlet{CTtitle}{pantone328}
+\colorlet{CTurl}{grayForLinks}
+
+%----------------------------------------------------------------------------------------
+%	CHANGING TEXT AREA 
+%----------------------------------------------------------------------------------------
+
+% \setlength{\parindent}{0cm}
+% \setlength{\parindent}{1.5em}
+%\linespread{1.05} % a bit more for Palatino
+%\areaset[current]{312pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip
+% \setlength{\marginparwidth}{7em}%
+\setlength{\marginparwidth}{7.05em}%
+% \setlength{\marginparsep}{2em}%
+
+%----------------------------------------------------------------------------------------
+%	USING DIFFERENT FONTS
+%----------------------------------------------------------------------------------------
+
+% \usepackage[oldstylenums]{kpfonts} % oldstyle notextcomp
+% \usepackage[osf]{libertine}
+% \usepackage{hfoldsty} % Computer Modern with osf
+% \usepackage[light,condensed,math]{iwona}
+% \renewcommand{\sfdefault}{iwona}
+% \usepackage{lmodern} % <-- no osf support :-(
+% \usepackage[urw-garamond]{mathdesign} % <-- no osf support :-(
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "phdThesis_csb"
+%%% TeX-master: "phdThesis_csb"
+%%% End:

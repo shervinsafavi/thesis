@@ -1,0 +1,71 @@
+\chapter{Paper \rom{3}}\label{cha:paper-besserve2020ned}
+\section*{Paper information} % 
+
+\input{chapters/paperInfo_besserve2020ned.tex}
+
+\section*{Summary} %
+\subsection*{Motivation}
+LFPs are intermediary signals, and as such, they
+reflect a mesoscopic picture of the brain dynamics \cite{liljenstroemMesoscopicBrainDynamics2012}.
+As LFPs are rich signals \cite{buzsakiOriginExtracellularFields2012,liljenstroemMesoscopicBrainDynamics2012,einevollModellingAnalysisLocal2013},
+they can be a pivotal point for bringing the brain dynamics at different scales together. 
+In particular, certain transient activities of LFPs reflect cooperative dynamics (we call them \emph{neural events}).
+A prominent example of such neural events are sharp wave-ripples (SWRs),
+and it has been observed they co-occur with well-coordinated activity at smaller scales (neurons and populations of neurons) \cite{csicsvariEnsemblePatternsHippocampal2000,csicsvariEnsemblePatternsHippocampal2000,olivaRoleHippocampalCA22016},
+as well as larger scale (entire brain) \cite{logothetisHippocampalCorticalInteraction2012,karimiabadchiSpatiotemporalPatternsNeocortical2020}.
+In spite of the importance of such characteristic neural activities (neural events),
+there are not many principled methods for identifying them in a single channel LFP.
+We introduce a principled method for identifying neural events in a single channel LFP.
+
+\subsection*{Material and Methods}
+We detect the neural events by isolating transient characteristic neural activities.
+We first compute the spectrograms of the LFP signals by applying short-term Fourier transform (STFT) on LFPs in order to exploit the spectral content of the LFPs.
+To identify the frequent transient neural activity with similar spectral content we apply non-negative Matrix Factorization (NMF).
+Notably, due to scale-invariant nature of LFPs (similar to other extracellular field potential \cite{buzsakiOriginExtracellularFields2012}) \cite{freemanScalefreeNeocorticalDynamics2007a,heScalefreeBrainActivity2014},
+we used Itakura-Saito divergence in the optimization procedure of NMF \cite{fevotteNonnegativeMatrixFactorization2009}
+in order to avoid under-weighting of high-frequency components due to their low power in the spectrum.
+The components result from NMF, provide the information on the spectral content of the neural events.
+In order to temporally isolate the neural events and characterize their temporal profile, 
+we apply a shift-invariant dictionary learning
+(a modified version of dictionary learning provided by \citet{mailheShiftinvariantDictionaryLearning2008a}).
+The latter step, allows us to temporally locate the neural events and also identify the time-domain profiles of events that their spectral content are characterized by the NMF step.
+
+We demonstrate the capability of our method by identifying neural events and their brain-wide signatures in Hippocampus and LGN recorded from anesthetized monkeys.
+Furthermore, in order to demonstrate that neural events have the potential of  relating the meso-scale dynamics even to cellular dynamics,
+we investigate the neural events in the simulation of thalamocortical circuitry  developed by \citet{costaThalamocorticalNeuralMass2016} where allow us to access both meso-scale dynamics and also some level of cellular dynamics.
+The simulation consists of neural mass models with two modules,
+one for the thalamus and one for the cortex, and mimics the behavior of these circuits during different stages of sleep.
+
+\subsection*{Results}
+We developed a novel methodology for detecting neural events (transient cooperative neural activities) such as sharp wave-ripples.
+With our method, neural events can be detected with minimal prior knowledge about the structure under study.
+Namely, the spectral content is automatically identified by the method,
+and various other attributes of neural events such as the number of neural event clusters  can also be identified by the method in an unsupervised fashion.
+
+Furthermore, we demonstrate the capability of the method by identifying neural events in Hippocampus and LGN and also explore their brain-wide \emph{macro-scale} signatures using concurrent fMRI recordings from anesthetized monkeys.
+The results suggest that similar to the previous study of \citet{logothetisHippocampalCorticalInteraction2012} that was focused on sharp wave-ripples,
+the identified events in Hippocampus and LGN reflect a large-scale coordinated dynamics.
+Indeed, this demonstrates the insightfulness of neural events for bridging the meso-scale and macro-scale brain dynamics.
+
+
+Our results also suggest that neural events can be insightful for establishing a bridge between meso-scale and micro-scale brain dynamics, even at the cellular level.
+We demonstrate this aspect, by investigating a simulation of the thalamocortical system developed by \citet{costaThalamocorticalNeuralMass2016}.
+With our methodology, we identified different kinds of spindles in the activity of the thalamus module of the simulation,
+and demonstrate that different events co-occur with characteristic activity patterns in the cellular variables (such as membrane potentials and ionic currents) of the simulation.
+
+\subsection*{Conclusion}
+
+With this method, we can find characteristic patterns of LFPs in an unsupervised fashion.
+This methodology not only allows us to detect well established neural events such as SWRs in a principled fashion,
+it also identifies characteristic patterns in a single channel LFP that have not been explored, and they can be insightful about cooperative and multi-scale dynamics of the brain.
+Such patterns are potentially very special in the sense that,
+they provide us a time window at which meso-scale dynamics are closely related to micro- and macro-scale dynamics.
+In fact, as pointed out in \autoref{sec:necess-invest-across} and \autoref{sec:need-new-tools}, this is of paramount importance for bridging the scales of neural dynamics,
+in particular when combined with GPLA introduced in \nameref{cha:paper-gpla} and NET-fMRI \cite{logothetisNeuralEventTriggeredFMRILargescale2014}.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phdThesis_csb"
+%%% End:
+
+
