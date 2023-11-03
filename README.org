@@ -1,0 +1,10 @@
+This thesis templates is based on =classicthesis= and slightly adjusted for cumulative thesis. 
+So most of instructions in its [[https://ctan.org/pkg/classicthesis?lang=en][manual]] applies here. 
+
+To work with the thesis:
+
+1. Set your document variables in =cfg.tex=, e.g., =\myTitle= etc.
+2. Here biblatex is used instead of bibtex, so you should change the citation style through the options of biblatex in =cfg.tex= (also the bib files =\bibliography{locallib,..}=).
+3. =ccfg.tex= contains personal customization's commands.
+4. In =main.tex= there is additional title page (starting on line 57), that might be useful for uploading the thesis to ArXiv, otherwise, probably useless.
+5. Also, =TitlepageGTCformat_JRFVversion.tex= that is used as the main cover, is cover format of University of Tübingen. You should feel free to use the ones that you like/need.
